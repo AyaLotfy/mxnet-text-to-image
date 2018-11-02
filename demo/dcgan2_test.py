@@ -1,6 +1,6 @@
 import os
 import sys
-import mxnet as mx
+#import mxnet as mx
 import logging
 import random
 
@@ -17,7 +17,7 @@ def main():
     logging.basicConfig(level=logging.DEBUG)
 
     model_dir_path = patch_path('models')
-    ctx = mx.gpu(0)
+    ctx =cpu(0)
 
     from mxnet_text_to_image.library.dcgan2 import DCGan
     from mxnet_text_to_image.data.flowers_texts import load_texts
